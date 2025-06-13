@@ -12,7 +12,11 @@ schlange/__init__.py
 schlange/cli.py
 schlange/einfach.py
 schlange/functions.py
+schlange/import_hook.py
+schlange/jupyter_magic.py
 schlange/keywords.py
+schlange/magic.py
+schlange/smart_import.py
 schlange/transformer.py
 schlange.egg-info/PKG-INFO
 schlange.egg-info/SOURCES.txt

@@ -70,6 +70,35 @@ def main():
             # Code ausführen
             globals_dict = {'__file__': os.path.abspath(args.datei)}
             
+            # Lade deutsche Funktionen in den globalen Namespace
+            from . import functions
+            deutsche_funktionen = {
+                'drucke': functions.drucke,
+                'eingabe': functions.eingabe,
+                'laenge': functions.laenge,
+                'länge': functions.laenge,
+                'bereich': functions.bereich,
+                'typ': functions.typ,
+                'zeichenkette': functions.zeichenkette,
+                'ganze_zahl': functions.ganze_zahl,
+                'dezimal_zahl': functions.dezimal_zahl,
+                'liste': functions.liste,
+                'woerterbuch': functions.woerterbuch,
+                'wörterbuch': functions.woerterbuch,
+                # Auch englische Funktionen für Fallback
+                'input': input,
+                'print': print,
+                'len': len,
+                'int': int,
+                'float': float,
+                'str': str,
+                'list': list,
+                'dict': dict,
+                'range': range,
+                'type': type,
+            }
+            globals_dict.update(deutsche_funktionen)
+            
             # Füge das Verzeichnis der Datei zum Python-Pfad hinzu
             datei_verzeichnis = os.path.dirname(os.path.abspath(args.datei))
             if datei_verzeichnis not in sys.path:
