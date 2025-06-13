@@ -67,7 +67,7 @@ für i in bereich(5):
 ```bash
 python -m schlange.cli mein_programm.py
 ```
-```
+
 
 ### 4️⃣ 🆕 .schlange Dateien (NEU in v0.1.5!)
 
