@@ -2,9 +2,20 @@
 
 **Python auf Deutsch** - Ein Python-Package, das deutsche Schlüsselwörter für Python bereitstellt.
 
+[![PyPI version](https://badge.fury.io/py/schlange.svg)](https://badge.fury.io/py/schlange)
+[![Downloads](https://pepy.tech/badge/schlange)](https://pepy.tech/project/schlange)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Überblick
 
-Schlange ermöglicht es, Python-Code mit deutschen Schlüsselwörtern zu schreiben. Anstatt `if`, `for`, `while` etc. können Sie deutsche Begriffe wie `wenn`, `für`, `solange` verwenden.
+**Schlange** ermöglicht es, Python-Code vollständig in deutscher Sprache zu schreiben. Mit **Version 0.1.5** wurden **.schlange Dateien** eingeführt - eine revolutionäre neue Art, komplett deutsche Python-Programme zu erstellen!
+
+## 🚀 Neue Features in v0.1.5
+
+- **🆕 .schlange Dateien** - Vollständig deutsche Python-Programme ohne Wrapper
+- **🔄 Erweiterte Import-Hooks** - Automatischer Import von .schlange Dateien  
+- **📝 Neues Schlüsselwort** - `zurückgeben` als Alternative zu `return`
+- **🔧 Verbesserte Transformation** - Robustere deutsche Code-Konvertierung
 
 ## Installation
 
@@ -12,81 +23,115 @@ Schlange ermöglicht es, Python-Code mit deutschen Schlüsselwörtern zu schreib
 pip install schlange
 ```
 
-## Schnellstart
+## 🌟 Vier Wege für deutschen Python-Code
 
-### Methode 1: Deutsche Funktionen direkt verwenden
+### 1️⃣ Deutsche Funktionen direkt verwenden
 
 ```python
-from schlange.functions import drucke, bereich, länge
+from schlange import drucke, bereich, laenge
 
 drucke("Hallo Welt!")
-for i in bereich(1, 6):
+für i in bereich(1, 6):
     drucke(f"Zahl: {i}")
+
+meine_liste = [1, 2, 3, 4, 5]
+drucke(f"Liste hat {laenge(meine_liste)} Elemente")
 ```
 
-### Methode 2: Deutsche Syntax mit Transformation
+### 2️⃣ Deutsche Syntax mit deutsch() Funktion
 
 ```python
-from schlange.transformer import führe_aus
+from schlange import deutsch
 
-deutscher_code = """
+deutsch("""
 funktion begrüße(name):
     drucke(f"Hallo {name}!")
-    gib_zurück f"Begrüßung für {name}"
+    zurückgeben f"Begrüßung für {name}"
 
 wenn 5 > 3:
     nachricht = begrüße("Welt")
     drucke(nachricht)
-"""
-
-führe_aus(deutscher_code)
+""")
 ```
 
-### Methode 3: CLI-Tool für deutsche .py-Dateien
+### 3️⃣ CLI-Tool für deutsche .py-Dateien
 
-Erstellen Sie eine Datei `mein_programm.py`:
+**Datei: `mein_programm.py`**
 ```python
-von schlange importiere *
-
 drucke("Deutsches Python!")
 für i in bereich(5):
     drucke(f"Zahl {i}")
 ```
 
-Führen Sie aus:
+**Ausführung:**
 ```bash
 python -m schlange.cli mein_programm.py
 ```
+```
 
-## Verwendung
+### 4️⃣ 🆕 .schlange Dateien (NEU in v0.1.5!)
 
-### Als Modul importieren
+**Das Highlight: Vollständig deutsche Python-Programme!**
 
+**Datei: `mein_programm.schlange`**
 ```python
-from schlange import *
+# -*- coding: utf-8 -*-
+drucke("Hallo aus einer .schlange Datei!")
 
-# Statt if/else
-wenn x > 5:
-    drucke("x ist größer als 5")
-sonst:
-    drucke("x ist kleiner oder gleich 5")
+# Variablen
+mein_name = "Python Entwickler"
+alter = 28
+hobbies = ["Programmieren", "Lesen", "Sport"]
 
-# Statt for-Loop
-für i in bereich(10):
-    drucke(i)
+# Bedingte Anweisungen
+wenn alter >= 18:
+    drucke(f"{mein_name} ist erwachsen!")
+    
+    # Schleifen
+    drucke("Meine Hobbies:")
+    für hobby in hobbies:
+        drucke(f"  • {hobby}")
 
-# Statt while-Loop
-solange x < 100:
-    x += 1
+# Funktionen definieren
+funktion berechne_quadrat(zahl):
+    ergebnis = zahl * zahl
+    zurückgeben ergebnis
+
+# Funktion verwenden
+für i in bereich(1, 4):
+    quadrat = berechne_quadrat(i)
+    drucke(f"{i}² = {quadrat}")
 ```
 
-### Als Skript ausführen
+**Verwendung in Python:**
+```python
+import schlange
 
-```bash
-schlange mein_programm.py
+# Methode A: Direkte Ausführung
+schlange.fuehre_schlange_aus("mein_programm.schlange")
+
+# Methode B: Mit Namespace-Zugriff
+namespace = schlange.lade_schlange_datei("mein_programm.schlange")
+
+# Auf Variablen zugreifen
+print("Name:", namespace['mein_name'])
+print("Alter:", namespace['alter'])
+
+# Funktionen aufrufen
+quadrat_func = namespace['berechne_quadrat']
+result = quadrat_func(5)
+print(f"5² = {result}")
 ```
 
-## Deutsche Schlüsselwörter
+### ✨ Warum .schlange Dateien?
+
+- ✅ **100% deutsche Syntax** - Keine englischen Schlüsselwörter
+- ✅ **Keine Wrapper nötig** - Direkte Ausführung ohne `deutsch()` Funktion
+- ✅ **Vollständiger Namespace-Zugriff** - Alle Variablen und Funktionen verfügbar
+- ✅ **Bessere Lesbarkeit** - Ideal für deutsche Entwickler und Lernende
+- ✅ **Einfache Integration** - Nahtlose Einbindung in bestehende Projekte
+
+## 📚 Deutsche Schlüsselwörter
 
 | Deutsch | English | Beschreibung |
 |---------|---------|--------------|
@@ -99,7 +144,8 @@ schlange mein_programm.py
 | `klasse` | `class` | Klassendefinition |
 | `importiere` | `import` | Modul importieren |
 | `von` | `from` | Import von spezifischen Elementen |
-| `gib_zurück` | `return` | Rückgabewert |
+| `zurückgeben` | `return` | Rückgabewert 🆕 |
+| `gib_zurück` | `return` | Rückgabewert (Alternative) |
 | `versuche` | `try` | Fehlerbehandlung |
 | `außer` | `except` | Ausnahmebehandlung |
 | `endlich` | `finally` | Abschlussblock |
@@ -115,39 +161,38 @@ schlange mein_programm.py
 | `fortsetzen` | `continue` | Nächste Iteration |
 | `bestehen` | `pass` | Leere Anweisung |
 
-## Funktionen
+## 🔧 Deutsche Funktionen
 
 | Deutsch | English | Beschreibung |
 |---------|---------|--------------|
-| `drucke()` | `print()` | Ausgabe |
+| `drucke()` | `print()` | Text ausgeben |
 | `eingabe()` | `input()` | Benutzereingabe |
-| `länge()` | `len()` | Länge ermitteln |
-| `bereich()` | `range()` | Zahlenbereich |
-| `typ()` | `type()` | Typ ermitteln |
+| `laenge()` | `len()` | Länge/Anzahl ermitteln |
+| `bereich()` | `range()` | Zahlenbereich erstellen |
+| `typ()` | `type()` | Datentyp ermitteln |
 | `liste()` | `list()` | Liste erstellen |
-| `wörterbuch()` | `dict()` | Dictionary erstellen |
+| `woerterbuch()` | `dict()` | Dictionary erstellen |
 
-## Beispiele
+## 💡 Praxisbeispiele
 
 ### Einfaches Programm
 
 ```python
-from schlange import *
+from schlange import drucke, eingabe, laenge
 
 name = eingabe("Wie heißt du? ")
 drucke(f"Hallo {name}!")
 
-wenn länge(name) > 10:
+wenn laenge(name) > 10:
     drucke("Du hast einen langen Namen!")
 sonst:
     drucke("Dein Name ist schön kurz.")
 ```
 
-### Klasse definieren
+### Klassen-Beispiel (.schlange Datei)
 
+**Datei: `person.schlange`**
 ```python
-from schlange import *
-
 klasse Person:
     funktion __init__(selbst, name, alter):
         selbst.name = name
@@ -155,11 +200,109 @@ klasse Person:
     
     funktion vorstellen(selbst):
         drucke(f"Ich bin {selbst.name} und {selbst.alter} Jahre alt.")
+    
+    funktion geburtstag(selbst):
+        selbst.alter += 1
+        drucke(f"Herzlichen Glückwunsch! Jetzt bin ich {selbst.alter}!")
 
-person = Person("Max", 25)
-person.vorstellen()
+# Person erstellen
+max = Person("Max Mustermann", 30)
+max.vorstellen()
+max.geburtstag()
 ```
 
-## Lizenz
+**Verwendung:**
+```python
+import schlange
 
-MIT License
+# .schlange Datei ausführen
+namespace = schlange.lade_schlange_datei("person.schlange")
+
+# Klasse aus .schlange Datei verwenden
+Person = namespace['Person']
+anna = Person("Anna Schmidt", 25)
+anna.vorstellen()
+```
+
+📖 **Weitere Informationen:** Siehe [SCHLANGE_DATEIEN.md](SCHLANGE_DATEIEN.md) für eine detaillierte Anleitung.
+| `ist` | `is` | Identitäts-Operator |
+| `durchbrechen` | `break` | Schleife verlassen |
+| `fortsetzen` | `continue` | Nächste Iteration |
+## 🎯 Anwendungsfälle
+
+### 🎓 Bildung
+- **Deutschsprachiger Programmierunterricht** - Lernen ohne Sprachbarrieren
+- **Universitäten und Schulen** - Deutsche Informatik-Kurse
+- **Coding-Bootcamps** - Schnellerer Einstieg für deutsche Muttersprachler
+
+### 👥 Entwicklerteams
+- **Prototyping** - Schnelle Entwicklung in der Muttersprache
+- **Dokumentation** - Deutsche Codebeispiele und Tutorials
+- **Teamkommunikation** - Bessere Verständlichkeit im deutschen Team
+
+### 🔬 Wissenschaft
+- **Forschungsprojekte** - Deutsche Algorithmus-Beschreibungen
+- **Datenanalyse** - Verständliche Scripts für Wissenschaftler
+- **Simulation** - Deutsche Modellbeschreibungen
+
+## 🌟 Erweiterte Features
+
+### Import-Hook System (Experimentell)
+```python
+import schlange
+
+# Import-Hook aktivieren
+schlange.install_import_hook()
+
+# Jetzt können .schlange Dateien wie normale Module importiert werden
+# import mein_modul  # würde mein_modul.schlange laden
+
+# Import-Hook deaktivieren
+schlange.uninstall_import_hook()
+```
+
+### Jupyter Notebook Integration (Experimentell)
+```python
+# In Jupyter Notebook
+%load_ext schlange.jupyter_magic
+
+%%deutsch
+funktion fibonacci(n):
+    wenn n <= 1:
+        zurückgeben n
+    sonst:
+        zurückgeben fibonacci(n-1) + fibonacci(n-2)
+
+drucke(fibonacci(10))
+```
+
+## 📖 Dokumentation
+
+- **[SCHLANGE_DATEIEN.md](SCHLANGE_DATEIEN.md)** - Vollständige Anleitung für .schlange Dateien
+- **[CHANGELOG.md](CHANGELOG.md)** - Versionshistorie und Updates
+- **[Beispiele/](beispiele/)** - Praktische Codebeispiele
+
+## 🤝 Beitragen
+
+Schlange ist ein Open-Source-Projekt! Beiträge sind willkommen:
+
+1. **Issues melden** - Bugs oder Feature-Wünsche
+2. **Pull Requests** - Code-Verbesserungen
+3. **Dokumentation** - Beispiele und Anleitungen
+4. **Tests** - Qualitätssicherung
+
+## 📜 Lizenz
+
+MIT License - siehe [LICENSE](LICENSE) Datei für Details.
+
+## 🔗 Links
+
+- **PyPI:** https://pypi.org/project/schlange/
+- **GitHub:** (Repository-Link)
+- **Dokumentation:** [SCHLANGE_DATEIEN.md](SCHLANGE_DATEIEN.md)
+
+---
+
+**Entwickelt mit ❤️ für die deutsche Python-Community**
+
+*Schlange v0.1.5 - Wo Python Deutsch spricht! 🐍🇩🇪*

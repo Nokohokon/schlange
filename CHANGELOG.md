@@ -1,5 +1,35 @@
 # Changelog
 
+## Version 0.1.5 (2025-06-13)
+
+### 🆕 Major New Feature: .schlange Dateien
+- ✅ **Neu:** Vollständige Unterstützung für `.schlange` Dateien
+- ✅ **Neu:** `schlange.fuehre_schlange_aus(dateipfad)` - Direkte Ausführung von .schlange Dateien
+- ✅ **Neu:** `schlange.lade_schlange_datei(dateipfad)` - Laden mit Namespace-Zugriff
+- ✅ **Neu:** Erweiterte Import-Hook-Unterstützung für .schlange Dateien
+- ✅ **Neu:** `zurückgeben` als Alias für `return` hinzugefügt
+- ✅ **Dokumentation:** Umfassende Anleitung in `SCHLANGE_DATEIEN.md`
+- ✅ **Beispiele:** Vollständige .schlange Beispiele im `beispiele/` Ordner
+
+### Technische Verbesserungen:
+- Erweiterte Transformer-Engine für bessere deutsche Keyword-Erkennung
+- Verbesserte Import-Hook-Architektur
+- Stabilere UTF-8 Behandlung in allen Code-Pfaden
+- Bessere Fehlerbehandlung bei Datei-Operationen
+
+### Features:
+- **Direkte Ausführung:** .schlange Dateien können ohne Wrapper ausgeführt werden
+- **Namespace-Zugriff:** Zugriff auf Variablen und Funktionen aus .schlange Dateien
+- **Vollständig deutsche Syntax:** Keine Mischung aus deutsch/englisch mehr nötig
+- **Integration:** Einfache Einbindung in bestehende Python-Projekte
+
+## Version 0.1.4 (2025-06-13)
+
+### Neue Features:
+- ✅ **Neu:** `deutsch()` Funktion für direkte Ausführung deutschen Codes
+- ✅ Beispiel: `deutsch("wenn x > 5: drucke('groß')")`
+- ✅ Vereinfachte API für einfache deutsche Code-Snippets
+
 ## Version 0.1.3 (2025-06-13)
 
 ### Kritische Bugfixes:

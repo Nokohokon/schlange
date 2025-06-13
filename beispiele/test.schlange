@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+# Beispiel einer .schlange Datei
+# Diese Datei kann direkt mit deutschen Schlüsselwörtern geschrieben werden
+
+drucke("Hallo aus einer .schlange Datei!")
+
+# Variablen definieren
+mein_name = "Python Schlange"
+alter = 5
+
+drucke(f"Ich bin {mein_name} und {alter} Jahre alt.")
+
+# Bedingte Anweisungen
+wenn alter >= 5:
+    drucke("Ich bin schon erwachsen!")
+sonst:
+    drucke("Ich bin noch ein Baby!")
+
+# Schleifen
+drucke("Zahlen von 1 bis 5:")
+für i in bereich(1, 6):
+    drucke(f"Zahl: {i}")
+
+# Listen
+meine_liste = liste([1, 2, 3, 4, 5])
+drucke(f"Meine Liste hat {laenge(meine_liste)} Elemente")
+
+# Funktion definieren
+funktion grüße(name):
+    drucke(f"Hallo {name}!")
+    zurückgeben f"Grüße an {name}"
+
+# Funktion aufrufen
+nachricht = grüße("Welt")
+drucke(nachricht)
+
+drucke("Ende der .schlange Datei!")
