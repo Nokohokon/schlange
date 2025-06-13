@@ -35,7 +35,7 @@ try:
 except ImportError:
     ERWEITERTE_FEATURES = False
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __author__ = "Konja Rehm"
 __description__ = "Python auf Deutsch - Deutsche Schlüsselwörter für Python"
 

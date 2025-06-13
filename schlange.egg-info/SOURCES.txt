@@ -1,15 +1,13 @@
+CHANGELOG.md
+FINALE_ANLEITUNG.md
 LICENSE
 MANIFEST.in
 README.md
+SCHLANGE_DATEIEN.md
 pyproject.toml
+requirements-dev.txt
 requirements.txt
 setup.py
-beispiele/hallo_welt.py
-beispiele/klassen_beispiel.py
-beispiele/mathematik_beispiel.py
-beispiele/test_cli.py
-beispiele/verwende_schlange_datei.py
-beispiele/vollstaendige_demo.py
 schlange/__init__.py
 schlange/cli.py
 schlange/einfach.py
@@ -24,5 +22,5 @@ schlange.egg-info/PKG-INFO
 schlange.egg-info/SOURCES.txt
 schlange.egg-info/dependency_links.txt
 schlange.egg-info/entry_points.txt
+schlange.egg-info/requires.txt
 schlange.egg-info/top_level.txt
-tests/test_schlange.py

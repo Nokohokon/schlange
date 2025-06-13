@@ -1,5 +1,34 @@
 # Changelog
 
+## Version 0.1.6 (2025-06-13)
+
+### 🔧 Kritische Bugfixes
+- ✅ **BEHOBEN:** Import-Syntax Fehler `import os als betriebssystem` 
+- ✅ **BEHOBEN:** Fälschliche Rück-Transformation von `as` zu `als` in `_additional_transforms`
+- ✅ **BEHOBEN:** Syntaxfehler bei deutschen Import-Statements
+- ✅ **VERBESSERT:** Vollständige Kompatibilität mit allen Python-Packages
+
+### 🧹 Projekt-Bereinigung
+- ✅ **ENTFERNT:** `beispiele/` Verzeichnis
+- ✅ **ENTFERNT:** `tests/` Verzeichnis  
+- ✅ **ENTFERNT:** Build-Artefakte (`build/`, `dist/`, `*.egg-info/`)
+- ✅ **HINZUGEFÜGT:** `.gitignore` für saubere Entwicklung
+- ✅ **OPTIMIERT:** Projektstruktur für Produktion
+
+### ✨ Verbesserungen
+- ✅ **ERWEITERT:** `pyproject.toml` mit besseren Metadaten
+- ✅ **ERWEITERT:** Keywords und Klassifikatoren für PyPI
+- ✅ **DOKUMENTIERT:** Umfassende Release-Notes
+
+### 📦 Package-Kompatibilität
+Jetzt funktionieren ALLE Python-Packages perfekt in `.schlange` Dateien:
+```python
+importiere os als system
+importiere math als mathe  
+von datetime importiere datetime als zeit
+von requests importiere get als hole
+```
+
 ## Version 0.1.5 (2025-06-13)
 
 ### 🆕 Major New Feature: .schlange Dateien

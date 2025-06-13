@@ -122,7 +122,7 @@ class DeutscherCodeTransformer:
         # "is" zurück zu "ist" falls es fälschlicherweise ersetzt wurde in f-strings
         code = re.sub(r'ist größer as', 'ist größer als', code)
         code = re.sub(r'(\w+) is (\w+)', r'\1 ist \2', code)
-        code = re.sub(r' as ', ' als ', code)
+        # Entfernt: code = re.sub(r' as ', ' als ', code)  # Das war der Fehler!
         
         return code
     
